@@ -4,8 +4,30 @@
   
 </head>
 
-    <body>
-    <div id="kar">
+   
+        <body id="kart">
+    <button onclick="red()">RED</button>
+    <button onclick="green()">GREEN</button>
+    <button onclick="blue()">BLUE</button>
+
+    <script>
+        function red()
+        {
+            document.getElementById("kart").style.backgroundColor="red";
+        }
+          function green()
+        {
+            document.getElementById("kart").style.backgroundColor="green";
+        }
+          function blue()
+        {
+            document.getElementById("kart").style.backgroundColor="blue";
+        }
+
+
+
+    </script>
+    <!-- <div id="kar">
         <button onclick="kart()"> click</button>
         <p id="kr"></p>
     </div>
@@ -15,7 +37,7 @@
             document.getElementById("kr").innerHTML="<h1>hello</h1>"
         }
 
-    </script>
+    </script> -->
 </body>
     
 
