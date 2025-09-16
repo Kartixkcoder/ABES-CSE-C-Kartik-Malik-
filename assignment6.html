@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ASSIGNMENT 6</title>
+</head>
+<body style="background-color:rgb(225, 169, 169);">
+  <div style="display:flex; gap:80px;">
+    <div>
+      <h3 id="h1"></h3>
+      <div id="t1"></div>
+    </div>
+    <div>
+      <h3 id="h2"></h3>
+      <div id="t2"></div>
+    </div>
+  </div>
+
+  <p>even= <span id="even"></span></p>
+  <p>odd= <span id="odd"></span></p>
+
+  <script>
+    var num1 = 5; 
+    var num2 = 6;  
+    var evens = "";
+    var odds = "";
+
+    function makeTable(num, divId) {
+      var str = "";
+      for (var i = 1; i <= 10; i++) {
+        var val = num * i;
+        str +=  val + "<br>";
+        if (val % 2 == 0) evens += val + " ";
+        else odds += val + " ";
+      }
+      document.getElementById(divId).innerHTML = str;
+    }
+
+    makeTable(num1, "t1");
+    makeTable(num2, "t2");
+
+    document.getElementById("even").innerHTML = evens;
+    document.getElementById("odd").innerHTML = odds;
+  </script>
+</body>
+</html>
