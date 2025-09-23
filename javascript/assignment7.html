@@ -135,19 +135,19 @@
     
     const data = {
       phone: [
-        { model: "iPhone 15", company: "Apple" },
-        { model: "Galaxy S24", company: "Samsung" },
-        { model: "Pixel 9", company: "Google" }
+        { model: "iPhone 17 pro", company: "Apple",price:134999},
+        { model: "Galaxy S25 ultra", company: "Samsung",price:124999 },
+        { model: "Pixel 9", company: "Google",price:89999}
       ],
       tv: [
-        { model: "Bravia X90", company: "Sony" },
-        { model: "Neo QLED", company: "Samsung" },
-        { model: "OLED C3", company: "LG" }
+        { model: "Bravia X90", company: "Sony",price:68999},
+        { model: "Neo QLED", company: "Samsung",price:74999 },
+        { model: "OLED C3", company: "LG",price:76999 }
       ],
       games: [
-        { model: "PlayStation 5", company: "Sony" },
-        { model: "Xbox Series X", company: "Microsoft" },
-        { model: "Nintendo Switch", company: "Nintendo" }
+        { model: "PlayStation 5", company: "Sony",price:54999 },
+        { model: "Xbox Series X", company: "Microsoft",price:44999 },
+        { model: "Nintendo Switch", company: "Nintendo",price:34999 }
       ]
     };
 
@@ -163,7 +163,7 @@
       
       content.innerHTML = "";
       data[type].forEach(item => {
-        content.innerHTML += `<p><b>${item.model}</b> - ${item.company}</p>`;
+        content.innerHTML += `<p><b>${item.model}</b> - <b>${item.company}</b> - <b>${price}</b></p>`;
       });
 
       
