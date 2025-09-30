@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px;
+    }
+
+    .container {
+      width: 350px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      margin-right: 20px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .task {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    .task input {
+      flex: 1;
+      padding: 8px;
+      margin-right: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .task button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .task button:hover {
+      background-color: #45a049;
+    }
+
+    .image-box {
+      width: 60px;
+      height: 60px;
+      background: #ddd;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+
+    .footer {
+      margin-top: 20px;
+      background: #eee;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .list-container {
+      width: 250px;
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .list-container h3 {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .list-container ul {
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+ 
+  <div class="container">
+    <h2>To Do List</h2>
+    
+  
+    <div class="image-box">
+     <img src="TO DO LIST.jpg" alt="List" style="height: 80px;">  
+    </div>
+
+    
+    <div class="task">
+      <input type="text" value="Play" id="task1">
+      <button onclick="addTask('task1')">+</button>
+    </div>
+
+   
+    <div class="task">
+      <input type="text" value="Go to market" id="task2">
+      <button onclick="addTask('task2')">+</button>
+    </div>
+
+    <div class="task">
+      <input type="text" value="Go to college" id="task3">
+      <button onclick="addTask('task3')">+</button>
+    </div>
+
+   
+    <div class="footer">
+      List of all
+    </div>
+  </div>
+
+ 
+  <div class="list-container" id="newList">
+    <h3>My To Do List</h3>
+    <ul id="taskList"></ul>
+  </div>
+
+  <script>
+    function addTask(taskId) {
+      let taskValue = document.getElementById(taskId).value;
+      if(taskValue.trim() !== "") {
+        let li = document.createElement("li");
+        li.textContent = taskValue;
+        document.getElementById("taskList").appendChild(li);
+      }
+    }
+  </script>
+</body>
+</html>
